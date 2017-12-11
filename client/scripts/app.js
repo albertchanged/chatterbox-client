@@ -66,7 +66,7 @@ let app = {
         app.lastUpdate.createdAt.$gte.iso = moment().utc().format();
         console.log(data);
         for (var i = 0; i < data.results.length; i++) {
-          if (_.escape(data.results[i].username) !== 'Chatterberts') {
+          // if (_.escape(data.results[i].username) !== 'Chatterberts') {
             // renders new rooms based on incoming messages
             app.renderRoom(_.escape(data.results[i].roomname));
             // adds all messages to allChat object
@@ -74,7 +74,7 @@ let app = {
             if (data.results[i].roomname === app.currentRoom) {
               app.currentRoomChats.push(data.results[i]);
             }
-          }   
+          // }   
         }
       },
       error: function (data) {
