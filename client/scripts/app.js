@@ -137,10 +137,4 @@ $(document).ready(function() {
   */
 
   //set interval
-
-
-
-
-
-
 });
